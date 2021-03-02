@@ -1,0 +1,13 @@
+.sprite{
+    border: 2px dashed rebeccapurple;
+    width: 90px;
+    height: 90px;
+    background:url(https://raw.githubusercontent.com/apietryga/Font-end-sources/master/lekcja2/cw1/sprites.jpg);
+}
+.sprite:hover{
+    background-position: 0px -90px;
+}
+.sprite:active{
+    background-position: 0px -180px;
+}
+    
