@@ -1,0 +1,44 @@
+$bgColor: rgb(228, 19, 54);
+$fontColor: rgb(49, 201, 130);
+$borderSize: 2px;
+@mixin style($rozmiar,$color) {
+    border: $rozmiar dashed $color;
+    font-size: $rozmiar;
+    color:$color;
+}
+%paka{
+    border: $borderSize dashed #000;
+    background-color:yellow;
+}
+body{
+    background-color: $bgColor;
+    // @include style(5px,blue);
+    @extend %paka;
+    p{
+        @include style(15px,pink);
+        color:$fontColor;
+        a{
+            color:yellow;
+        }
+    }
+    a{
+        color:$fontColor;
+    }
+    .flex{
+        display:flex;
+        color:#fff;
+        border:2px dashed red;
+        div{
+            border:2px dashed rgb(255, 255, 255);
+            padding:5%;
+        }
+    }
+}
+
+@for $i from 1 through 4{
+    .flex-item#{$i}{ 
+        font-size: 5px * $i;
+        background-color: lighten(#000000, 25%*$i);
+        color: darken(#fff, 25%*$i);
+    }
+}

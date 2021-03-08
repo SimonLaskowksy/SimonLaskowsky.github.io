@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            /* Background pattern from Toptal Subtle Patterns */
+            background-image:url(img/double-bubble-dark.png);
+            color: aliceblue;
+        
+        }
+        
+        ol li{
+            list-style-type: none;
+        }
+        ol,ul{
+            padding: 0!important;;
+
+        }
+        ol{
+            display:flex;
+            cursor: pointer;
+        }
+
+        ol > li {
+            border:2px dashed red;
+            position:relative;
+        }
+        ol > li > ul{
+            position:absolute;
+        }
+
+        ol > li:hover > ul > li{
+            background-color:red;
+            display:flex;
+        }
+        ol > li > ul > li {
+            display:none;
+        }
+
+    </style>
+</head>
+<body>
+
+
+    <ol>
+        <li>
+            ol li
+            <ul>
+                <li>ul li </li>
+            </ul>
+        </li>
+        <li>
+            ol li
+            <ul>
+                <li>ul li </li>
+            </ul>
+        </li>
+
+
+    </ol>
+
+
+
+    &circledS;
+    
+    
+</body>
+</html>

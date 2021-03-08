@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin:0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+             width: 100vh;
+            height: 100vh;
+
+        }
+        main*{
+            position: absolute;
+        }
+        main{
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <script>
+
+        let game = {
+            plane : document.createElement("main"),
+            setPlane(){
+                document.body.append(this.plane);
+                this.plane.style.border = "0.25px solid black";
+                window.screen.width;
+                window.screen.height;        
+                let din = 0;
+
+                if(window.screen.width > window.screen.height){
+                    din = window.screen.height;
+                }
+                else{
+                    din = window.screen.width;
+                }
+
+                din = 0.8 * din;
+                this.plane.style.width = din + "px";
+                this.plane.style.height = din + "px";
+            },
+            walls: {
+                wallsTemplates: [
+                    [
+                        [0,0,10,1],
+                        [0,10,10,1],
+                        [10,-1,10,1],
+                        [10,-12,20,1],
+                        [30,-1,1,24],
+                        [10,-1,20,1],
+                        [0,-12,1,24],
+                        [0,-1,20,1],
+                        [30,-12,1,24],
+                        [10,-1,20,1],
+                        [0,-12,1,24],
+                        [0,-1,20,1],
+                        [30,-12,1,24],
+                        [10,-1,20,1],
+                        [0,-12,1,24],
+                        [0,-1,20,1],
+                        [30,-12,1,24],
+                        [0,3,31,1],
+                        [0,-16,1,15],
+                        [31,0,5,1],
+                        [35,-95,1,94],
+                        [31,-99,10,1],
+                        [40,0,1,95],
+                        [35,3,10,1],
+                        [45,-95,1,95],
+                        [41,-100,10,1],
+                        [50,0,1,95],
+                        [45,3,10,1],
+                        [55,-95,1,95],
+                        [50,-100,10,1],
+                        [60,-1,1,96],
+                        [56,3,44,1],
+                        [60,-5,36,1],
+                        [99,-85,1,89],
+                        [64,-10,36,1],
+                        [60,-6,36,1],
+                        [64,-6,36,1],
+                        [60,-6,36,1],
+                        [64,-6,36,1],
+                        [60,-6,36,1],
+                        [64,-6,36,1],
+                        [60,-6,36,1],
+                        [64,-6,36,1],
+                        [60,-6,36,1],
+                        [64,-6,36,1],
+                        [60,-6,36,1],
+                        [64,-6,36,1],
+                        [60,-6,36,1],
+                        [64,-6,36,1],
+                        [60,-6,36,1],
+                        [64,-6,36,1],
+                        [60,-11,40,1],
+                        [90,0,10,10,"meta"],
+                        [0,-9.97,10,10,"start"],
+                    ]
+                ],
+                build(stage = 0){
+                    //console.log(this.wallsTemplates[stage]);
+                    for(w of this.wallsTemplates[stage]){
+                       // if(typeof w[4] != "undefined"){
+                            this.singlewall(w[0],w[1],w[2],w[3],w[4]);
+                       // }else{
+                       //     this.singlewall(w[0],w[1],w[2],w[3]);
+                      //  }
+                    }
+                },
+                singlewall(x,y,w,h,type = "wall"){
+                    let wall = document.createElement("div");
+                    game.plane.append(wall);
+                    wall.style.width = w + "%";
+                    wall.style.height = h + "%";
+                    wall.style.marginLeft = x + "%";
+                    wall.style.marginTop = y + "%";
+                    wall.className = type;
+                    if(type == "meta"){
+                        wall.style.backgroundColor = "black";
+                        wall.onmouseover = () => { game.over(true)}
+                    }else if(type == "start"){
+                        wall.onclick = () => { game.start(); };
+                        wall.style.backgroundColor = "black";
+                    }
+                    else{
+                        wall.style.backgroundColor = "black";
+                        //wall.onmouseover = () => {console.log("wyjechales")}
+                    }
+                    
+                }
+            },
+            start(){
+                console.log("start");
+                document.querySelector(".start").onclick = () => {};
+                document.querySelector(".meta").onmouseover = () => {game.over(true);};
+                let walls = document.querySelectorAll(".wall");
+                for(w of walls){
+                    w.onmouseover = () => { console.log("walnales")}
+                }
+            },
+            over(iswin){
+                document.querySelector(".start").onclick = () => {game.start()};
+                document.querySelector(".meta").onmouseover = () => {};
+                let walls = document.querySelectorAll(".wall");
+                for(w of walls){
+                    w.onmouseover = () => {}
+                }
+
+                if(iswin){
+                    console.log("wygrales");
+                }else{
+                    console.log("przegrales");
+                }
+  
+            }
+        };
+        game.walls.build(0);
+        window.onresize = () =>{
+            game.setPlane();
+        }
+        game.setPlane();
+
+    </script>
+</body>
+</html>

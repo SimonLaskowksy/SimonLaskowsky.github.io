@@ -1,0 +1,127 @@
+body .tytul, body .opis, body .opis .okno1, body .opis .okno2, body .opis2, body .opis2 .okno1, body .opis2 .okno2 {
+  border: 0.25px solid #c5c4c4;
+  border-radius: 3px;
+}
+
+body {
+  padding-left: 300px;
+  padding-right: 300px;
+}
+
+body .tytul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .tytul .napis {
+  font-size: larger;
+  margin: 50px 150px 50px 150px;
+}
+
+body .opis {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 300px;
+}
+
+body .opis .okno1 {
+  margin: 10px 5px 10px 10px;
+  width: 70%;
+}
+
+body .opis .okno2 {
+  margin: 10px 10px 10px 5px;
+  width: 30%;
+}
+
+body .czekolada {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas: "p1 p2 p3" "p6 p4 p5";
+}
+
+body .czekolada div {
+  height: 25vh;
+  border: 15px solid #000;
+  background-size: cover;
+  background-position: center;
+}
+
+body .czekolada div:nth-child(1) {
+  background-image: url(img/d1.jpg);
+  border-color: #262626;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: p1;
+}
+
+body .czekolada div:nth-child(2) {
+  background-image: url(img/d2.jpg);
+  border-color: #4d4d4d;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: p2;
+}
+
+body .czekolada div:nth-child(3) {
+  background-image: url(img/d3.jpg);
+  border-color: #737373;
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: p3;
+}
+
+body .czekolada div:nth-child(4) {
+  background-image: url(img/d4.jpg);
+  border-color: #999999;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: p4;
+}
+
+body .czekolada div:nth-child(5) {
+  background-image: url(img/d5.jpg);
+  border-color: #bfbfbf;
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: p5;
+}
+
+body .czekolada div:nth-child(6) {
+  background-image: url(img/d6.jpg);
+  border-color: #e6e6e6;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: p6;
+}
+
+body .opis2 {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 300px;
+}
+
+body .opis2 .okno1 {
+  margin: 10px 5px 10px 10px;
+  width: 70%;
+}
+
+body .opis2 .okno2 {
+  margin: 10px 10px 10px 5px;
+  width: 30%;
+}
+/*# sourceMappingURL=style.css.map */

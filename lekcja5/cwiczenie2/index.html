@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="clicker"></div>
+    <div class="bierzmniejs">tekst</div>
+
+    <script>
+        console.log("jakis teskt")     //komunikacja z java scriptem
+
+        // let bierzmniejs = document.querySelector(".bierzmniejs");
+        // bierzmniejs.innerHTML = "eluwina";
+        // bierzmniejs.style.border = "0.25px solid red";
+        // console.log(bierzmniejs)
+
+        //operatory
+        let x = 5;
+        //x++
+        //x = x+1;    =     x+=5;
+
+        // function myFunc(a,b){ to samo co 2 linijki nizej linijka nizej 
+        //     console.log(a*b)
+        //     return a*b;
+        //}
+
+         let zwrot = myFunc(2,3);
+        console.log(zwrot)
+        console.log(x);
+        document.querySelector("bierzmniejs").innerHTML = zwrot; 
+
+        let myFunc = (a,b) =>{
+            r
+            return a*b;
+        }
+
+        //obiekty
+        let x{
+
+        "name":"John" ,        //format "dzejson"
+        "saySomething" : () => {
+            console.log("something");
+        }
+        };           
+        x.saySomething();
+
+        //tablice
+        let heroes = ["siostry","pawel","najman","stonoga"];
+        heroes[0] = "bracia"; //nadpisanie
+        heroes.pop(); //wujebywanie z tablicy
+        heroes.push("stary pijany"); //pakowanie starego do tablicy 
+
+
+        let y = [
+        {
+            "name":"John",
+            "surname":"kox"
+
+        },
+            {"name":"Andrew"},
+            {"name":"zeus"}
+        ];
+        console.log(y[0].name+y[0].surname);
+
+        let obj = {
+            "say":()=>{
+                console.log("emano")
+            }
+        };
+
+        let clicker = document.querySelector(".clicker");
+        clicker.onclick = () => {obj.say()}
+        ;
+        let xd = 0;
+        if(xd==0){
+            console.log("jest zero");
+        }else{
+            console.log("nie jest zero chamie panie janie bim bam bom bim bam bom");
+        }
+
+
+
+
+    </script>
+</body>
+</html>

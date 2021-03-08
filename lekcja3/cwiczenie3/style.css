@@ -1,0 +1,196 @@
+body{
+    background-image: url(img/interlaced.png);
+}
+img{
+    width: 150px;
+    height: 100px;
+
+}
+nav{
+    border: 0px solid rgb(42, 44, 49);
+    border-radius: 4px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0);
+    display: flex;
+    /*justify-content: center;*/
+}
+.menu{
+    height: 100px;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+}
+ol li{
+    list-style-type: none;
+}
+ol,ul{
+    padding: 0!important;;
+
+}
+ol{
+    display:flex;
+    cursor: pointer;
+    margin:0px;
+}
+ol > li {
+    border-radius: 4px;
+    position:relative;
+}
+ol > li > ul{
+    position:absolute;
+}
+
+ol > li:active > ul > li{
+    background-color:rgb(255, 255, 255);
+    display:flex;
+}
+ol > li > ul > li {      /*to co wyskakuje */
+    border: 0px solid rgb(42, 44, 49);
+    border-radius: 4px;   
+    margin-top:42px;    
+    display:none; 
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0);
+}
+li{                     /*przyciski */
+    height: 100px;      
+    width: 150px;
+    justify-content: center;
+    text-align: center;
+    
+}
+li:hover{
+    box-shadow: 0px 12px 16px 0px rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0);
+}
+li:active{
+    background-color: rgba(255, 255, 255, 0.767);
+    box-shadow: 0 0px #666;
+    transform: translateY(0px);
+}
+.cos{
+    font-size: 20px;        
+    margin-top: 35px;
+}
+#CONT{
+    display: flex;
+    padding-left: 150px;
+    padding-right: 150px;
+    height: 1015px;
+    margin-top: 15px;
+}
+#left{
+    background-color: rgb(255, 255, 255);
+    width: 30%;
+    height: 500px;
+    border: 0px solid rgb(42, 44, 49);
+    border-radius: 4px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0);
+    margin-right: 10px;
+}
+aside{
+    margin: 20px 10px 10px 10px;
+    height: 100%;
+}
+.polecane{
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+.przypisy{
+    border: 0.25px solid rgb(189, 189, 189);
+    border-radius: 2px;
+    margin-top: 10px;
+    height: 74px;
+}
+#right{
+    background-color: rgb(255, 255, 255);
+    width: 70%;
+    height: 1000px;
+    border: 0px solid rgb(42, 44, 49);
+    border-radius: 4px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0);
+    margin-left: 10px;
+}
+main{
+    margin: 10px 20px 10px 20px;
+    height: 100%;
+}
+.tytul{
+    margin-bottom: 10px;
+    font-size: 40px;
+}
+.podtytul{
+    font-size: 20px;
+    width: 70%;
+}
+.zdjecie{
+    background-image: url(img/dwiebaby.jpg);
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 500px;
+    background-size: cover; /*dopasowywuje sie do ramki */
+    /* background-position: center; */
+}
+#CONT2{
+    height: 500px;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+.komy{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 50%;
+    border: 0px solid rgb(42, 44, 49);
+    border-radius: 4px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.nadkom{
+    font-size: 20px;
+    margin-left: 20px;
+
+}
+.dowpisania{
+    width: 100%;
+    height: 45%;
+    display: flex;
+}
+.ikona{
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    margin-left: 20px;
+}
+.tekst{
+    border-radius: 2px;
+    width: 95%;
+    height: 100px;
+    margin-left: 10px;
+    margin-right: 25px;
+}
+#kom{
+    width: 100%;
+    height: 95px;
+}
+.dowpisania2{
+    width: 100%;
+    height: 45%;
+    display: flex;
+}
+.ikona2{
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    margin-left: 20px;
+}
+.tekst2{
+    border: 0.25px solid rgb(189, 189, 189);
+    border-radius: 2px;
+    width: 95%;
+    height: 100px;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+
+
