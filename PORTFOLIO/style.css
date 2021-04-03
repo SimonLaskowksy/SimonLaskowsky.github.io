@@ -1,0 +1,250 @@
+body {
+  margin: 0;
+}
+
+body .tlo {
+  background-color: #222222;
+  height: 100vh;
+}
+
+body .tlo .cont {
+  height: 100%;
+  position: relative;
+}
+
+body .tlo .cont .naglowek {
+  z-index: 1;
+  position: -webkit-sticky;
+  position: sticky;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0%;
+  width: 100%;
+  height: 5.7%;
+  -webkit-box-shadow: 0px 25px 65px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 25px 65px rgba(0, 0, 0, 0.15);
+}
+
+body .tlo .cont .naglowek .n_lewy {
+  width: 34%;
+  height: 100%;
+  left: 0%;
+  background-color: #FFFFFF;
+}
+
+body .tlo .cont .naglowek .n_prawy {
+  width: 66%;
+  height: 100%;
+  right: 0%;
+  background-color: #3C3B3A;
+}
+
+body .tlo .cont .naglowek .sekcje {
+  position: absolute;
+  left: 3.8%;
+  top: 28.25%;
+  height: 43.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  color: #202020;
+}
+
+body .tlo .cont .naglowek .sekcje .logo {
+  height: 100%;
+  left: 0px;
+}
+
+body .tlo .cont .naglowek .sekcje .logo h4 {
+  font-family: Be Vietnam;
+  font-style: normal;
+  font-weight: bold;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+body .tlo .cont .naglowek .sekcje .s {
+  margin-left: 45px;
+  font-family: Be Vietnam;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #ffffff;
+  mix-blend-mode: difference;
+}
+
+body .tlo .cont .naglowek .sekcje2 {
+  position: absolute;
+  right: 3.8%;
+  top: 28.25%;
+  height: 43.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: #ffffff;
+}
+
+body .tlo .cont .naglowek .sekcje2 .ikony {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  left: 0px;
+}
+
+body .tlo .cont .naglowek .sekcje2 .ikony .link {
+  margin-top: auto;
+  margin-bottom: auto;
+  text-decoration: none;
+  color: #FFFFFF;
+  mix-blend-mode: difference;
+  margin-right: 45px;
+}
+
+body .tlo .cont .naglowek .sekcje2 .ikony .link:hover {
+  color: #d4d4d4;
+  -webkit-box-shadow: 0px 25px 65px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 25px 65px rgba(0, 0, 0, 0.15);
+}
+
+body .tlo .cont .naglowek .sekcje2 .p_zone {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .tlo .cont .naglowek .sekcje2 .p_zone .darkmode {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 45px;
+  font-family: Be Vietnam;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+body .tlo .cont .naglowek .sekcje2 .p_zone .przycisk {
+  margin-left: 10px;
+}
+
+body .tlo .cont .naglowek .sekcje2 .p_zone .przycisk .p_tlo {
+  width: 40px;
+  height: 22.5px;
+  background-color: #d6d6d6;
+  border-radius: 93px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .tlo .cont .naglowek .sekcje2 .p_zone .przycisk .p_tlo .p_kropka {
+  position: absolute;
+  background: #3C3B3A;
+  border-radius: 93px;
+  width: 17.0px;
+  height: 17px;
+  right: 3px;
+}
+
+body .tlo .cont .naglowek .sekcje2 .p_zone .przycisk:hover {
+  cursor: pointer;
+}
+
+body .tlo .cont .lewy {
+  position: absolute;
+  width: 34%;
+  height: 100%;
+  background-color: #FFFFFF;
+  left: 0%;
+}
+
+body .tlo .cont .prawy {
+  right: 0%;
+  position: absolute;
+  width: 66%;
+  height: 100%;
+  background-color: #222222;
+}
+
+body .tlo .cont .glowne {
+  position: absolute;
+  width: 66.8%;
+  height: 70%;
+  left: 16.5%;
+  top: 16.8%;
+}
+
+body .tlo .cont .glowne .awatar {
+  width: 100px;
+  height: 100px;
+  left: 0;
+  top: 0;
+  background-image: url(img/moje_foto.jpg);
+  background-size: cover;
+  background-position: center;
+  -webkit-box-shadow: 0px 25px 65px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 25px 65px rgba(0, 0, 0, 0.15);
+  border-radius: 93px;
+}
+
+body .tlo .cont .glowne .wstep {
+  position: absolute;
+  left: 0;
+  top: 150px;
+  font-family: EB Garamond;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 70px;
+  line-height: 100%;
+  /* or 70px */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: -0.02em;
+  color: white;
+  mix-blend-mode: difference;
+}
+
+body .tlo .cont .glowne .linia {
+  border: 0.5px solid  #222222;
+  position: absolute;
+  left: 0;
+  top: 350px;
+  width: 20%;
+}
+
+body .tlo .cont .glowne .tekst {
+  position: absolute;
+  left: 0;
+  top: 400px;
+  font-family: Be Vietnam;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 25px;
+  color: white;
+  color: #d6d6d6;
+  mix-blend-mode: difference;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,65 @@
+body{
+    .jasny{
+        background-color: white;
+        color: black;
+        border: black;
+    }
+    .ciemny{
+        border: white;
+        background-color: black;
+        color: white;
+    }
+.portfolio{
+    a{
+        text-decoration: none;
+        color: inherit;
+    }
+    border: 0.25px solid black;
+    text-align: center;
+    font-size: 50px;
+    padding:20px;
+    .menu{
+        margin-top: 20px;
+        font-size: 20px;
+        border: 0.25px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .przycisk{
+            border:0.25px solid black;
+            margin:5px;
+            a{
+                color:inherit;  //dziedziczy z rodzica
+                text-decoration: none;
+                margin: 5px;
+            }
+        }
+    }
+    
+}
+.cont{
+    border: 0px 1px 1px 1px solid black;
+    display: flex;
+    flex-direction: row-reverse;
+    height: 800px;
+    .prawo{
+        
+        width: 75%;
+        margin:30px;
+        .imie{
+            font-size: 40px;
+            margin: 10px 10px 10px 0px;
+        }
+    }
+    .lewo{
+        border-right:1px solid black;
+        width: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: 100%;
+        }
+    }
+}
+}

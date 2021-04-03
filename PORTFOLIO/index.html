@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fontello.css">
+</head>
+<body>
+    <div class="tlo">
+        <div class="cont">
+            <div class="naglowek">
+                <div class="n_lewy">
+
+                </div>
+                <div class="n_prawy">
+
+                </div>
+                <div class="sekcje">
+                    <div class="logo">
+                        <h4> Szymon Laskowski </h4>
+                    </div>
+                    <!-- <div class="s">section one</div>
+                    <div class="s">section two</div>
+                    <div class="s">section three</div> -->
+                </div>
+                <div class="sekcje2">
+                    <div class="ikony">  <!-- nie dziala i chuj -->
+                        <a href="https://www.facebook.com/profile.php?id=100008975593389" target="_blank" class = "link">
+                            <i class="icon-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com/_lasq_/" target="_blank" class = "link">
+                            <i class="icon-instagram"></i>
+                        </a>
+                        <a href="#" class = "link">
+                            <i class="icon-twitter-bird"></i>
+                        </a>
+                    </div>
+                    <div class="p_zone">
+                        <div class="darkmode">
+                            Dark mode: 
+                        </div>
+                        <div class="przycisk" >
+                            <div class="p_tlo">
+                                <div class="p_kropka" >
+
+                                </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lewy">
+                <div class="lewy2"></div>
+            </div>
+            <div class="prawy">
+                <!-- <div class="prawy2"></div> -->
+            </div>
+            <div class="glowne">
+                <div class="awatar">
+
+                </div>
+                <div class="wstep">
+                    Cześć. <br> Nazywam się Szymon
+                </div>
+                <div class="linia">
+
+                </div>
+                <div class="tekst">
+                    Jestem początkującym Front-End Developerem. Tworzenie stron internetowych jest dla mnie pasją, którą odkryłem w liceum informatycznym. Wtedy właśnie zorientowałem się że zamiast zwykłego programowania wolę tworzyć strony internetowe. Od tamtej pory staram się poszerzać własne horyzonty, i skrupulatnie dąże do samorealizacji na tej płaszczyźnie. Moja wiedza oraz umiejętności zostały znacznie aktualizowane po ukończeniu szkolenia na Front-End Developera, które ukończyłem 11.03.2021. Strona ta, stworzona przeze mnie jest prezentacją moich umiejętności, postawiłem na minimalizm oraz dosyć oryginalną funkcję zmiany koloru za pomocą przycisku.
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // let l = document.querySelector(".lewy");
+        // let p = document.querySelector(".prawy");
+        // let y = document.querySelector(".cont");
+        // y.onmouseover = () =>{
+        //     l.style.background = p.style.background;
+        //     p.style.background = l.style.background;
+        // };
+
+        let dark = document.querySelector(".darkmode");
+        let tlo = document.querySelector(".p_tlo");
+        let kropka = document.querySelector(".p_kropka");
+        let lo = document.querySelector(".logo");
+        let h = document.querySelector(".cont");
+        let l = document.querySelector(".lewy");
+        let p = document.querySelector(".prawy");
+        let nl = document.querySelector(".n_lewy");
+        let np = document.querySelector(".n_prawy");
+        let isDark = true;
+        document.querySelector(".przycisk").onclick = () =>{
+            if(isDark){
+                l.style.backgroundColor = "#222222";
+                p.style.backgroundColor = "#FFFFFF";
+                nl.style.backgroundColor = "#3C3B3A";
+                np.style.backgroundColor = "#FFFFFF";
+                lo.style.color = '#d6d6d6';
+                tlo.style.backgroundColor = "#3C3B3A";
+                kropka.style.backgroundColor = "#FFFFFF";
+                kropka.style.right = '19.0px';
+                kropka.style.width = '17.0px';
+                kropka.style.height = '16.0px';
+                dark.style.color = '#3C3B3A';
+            }
+            else{
+                l.style.backgroundColor = "#FFFFFF";
+                p.style.backgroundColor = "#222222";
+                nl.style.backgroundColor = "#FFFFFF";
+                np.style.backgroundColor = "#3C3B3A";
+                lo.style.color = '#3C3B3A';
+                tlo.style.backgroundColor = "#FFFFFF";
+                kropka.style.backgroundColor = "#3C3B3A";
+                kropka.style.right = '3px';
+                dark.style.color = '#FAF4E6';
+            }
+            isDark = !isDark;
+
+        }
+        
+    </script>
+</body>
+</html>

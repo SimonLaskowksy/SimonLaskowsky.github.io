@@ -1,0 +1,74 @@
+[
+    {
+        "name":"John",
+        "surname":  "Doe",
+        "stanowisko": "sprzątacz",
+        "staz": 2
+    },
+    {
+        "name":"Kamil",
+        "surname":  "Ślimak",
+        "stanowisko": "stażysta",
+        "staz": 1
+    },
+    {
+        "name":"Miranda",
+        "surname":  "Daribu",
+        "stanowisko": "Też",
+        "staz": 3
+    },
+    {
+        "name":"Ireneusz",
+        "surname":  "Zasada",
+        "stanowisko": "CTO jr",
+        "staz": 4
+    },
+    {
+        "name":"Idzi",
+        "surname":  "Mleczko",
+        "stanowisko": "Kierowca",
+        "staz": 3
+    },
+    {
+        "name":"Izabela",
+        "surname":  "Łęcka",
+        "stanowisko": "konserwator",
+        "staz": 5
+    },
+    {
+        "name":"Alicja",
+        "surname":  "Kowalska",
+        "stanowisko": "HR",
+        "staz": 10
+    },
+    {
+        "name":"Mieszko",
+        "surname":  "Mieszkowski",
+        "stanowisko": "Zaganiacz",
+        "staz": 4
+    },
+    {
+        "name":"Mirosława",
+        "surname":  "Zielińska",
+        "stanowisko": "Founder",
+        "staz": 15
+    },
+    {
+        "name":"Ędward",
+        "surname":  "Ącki",
+        "stanowisko": "CTO",
+        "staz": 12
+    },
+    {
+        "name":"Marek",
+        "surname":  "Antoniusz",
+        "stanowisko": "Negocjator",
+        "staz": 3
+    },
+    {
+        "name":"Jerzy",
+        "surname":  "Kaczyński",
+        "stanowisko": "Poseł",
+        "staz": 5
+    }
+] 
