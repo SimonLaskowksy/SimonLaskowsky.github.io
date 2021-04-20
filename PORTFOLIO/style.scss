@@ -187,12 +187,13 @@ body
                 .wstep{
                     position: absolute;
                     left: 0;
-                    top: 150px;
+                    top: 20%;
 
                     font-family: EB Garamond;
                     font-style: normal;
                     font-weight: bold;
-                    font-size: 70px;
+                    //font-size: 70px;
+                    font-size:8vh;
                     line-height: 100%;
                     /* or 70px */
                     display: flex;
@@ -205,13 +206,13 @@ body
                     border: 0.5px solid  #222222;
                     position: absolute;
                     left: 0;
-                    top:350px;
+                    top:50%;
                     width: 20%;
                 }
                 .tekst{
                     position: absolute;
                     left: 0;
-                    top:400px;
+                    top:60%;
 
                     
                     font-family: Be Vietnam;
