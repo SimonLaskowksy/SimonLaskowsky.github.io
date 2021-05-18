@@ -1,6 +1,48 @@
+//predkosc animacji 
+$toggle-control-speed: 0.15s;
+$primary: #dc5656;
+$primary-ultralight: mix(white, $primary, 80%);
+$primary-light: mix(white, $primary, 25%);
+$primary-dark: mix(black, $primary, 25%);
+$primary-ultradark: mix(black, $primary, 80%);
+$black: #333333;
+$white: #eeeeee;
+
 body
 {
+    cursor: none;
     margin:0;
+
+    .cursor-dot,
+    .cursor-dot-outline {
+    z-index: 2;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease-in-out,
+                transform 0.3s ease-in-out;
+    }
+
+    .cursor-dot {
+        $size: 8px;
+        width: $size;
+        height: $size;
+        background-color: white;
+        mix-blend-mode: difference;
+    }
+
+    .cursor-dot-outline {
+        $size: 40px;
+        width: $size;
+        height: $size;
+        background-color: white;
+        mix-blend-mode: difference;
+    }
+
     .tlo{
         //padding:5px;
         background-color: #222222;
@@ -25,12 +67,14 @@ body
                     height: 100%;
                     left: 0%;
                     background-color: #FFFFFF;
+                    transition: $toggle-control-speed;
                 }
                 .n_prawy{
                     width: 66%;
                     height: 100%;
                     right: 0%;
                     background-color: #3C3B3A;
+                    transition: $toggle-control-speed;
                     
                 }
     
@@ -97,9 +141,14 @@ body
                             margin-right: 45px;
                         }
                         .link:hover{
-                            color: #d4d4d4;
+                            height: 110%;
+                            width: 110%;
                             box-shadow: 0px 25px 65px rgba(0, 0, 0, 0.15);
+                            transition: $toggle-control-speed;
                         }
+                        // .link:active{
+                        //     color: white;
+                        // }
                     }
                     
                     .p_zone{
@@ -116,13 +165,11 @@ body
                             //line-height: 18px;
                         }
                         .przycisk{
-                            //right: 200px;
                             margin-left: 10px;
-                            //line-height: 10000px;
                             .p_tlo{
                                 //position: absolute;
                                 width: 40px;
-                                height: 22.5px;
+                                height: 20px;
                                 background-color: #d6d6d6
                                 
                                 ;
@@ -132,15 +179,17 @@ body
                                 .p_kropka{
                                     position: absolute;
                                     background: #3C3B3A;
-                                    border-radius: 93px;
-                                    width: 17.0px;
-                                    height: 17px;
-                                    right: 3px;
+                                    border-radius: 100px;
+                                    width: 20px;
+                                    height: 20px;
+                                    right: 0px;
+                                    border: 1px solid rgb(179, 177, 177) ;
+                                    transition: $toggle-control-speed;
                                 }
                             }
                         }
                         .przycisk:hover{
-                            cursor: pointer;
+                            //cursor: pointer;
                         }
                     }
                 }
@@ -151,6 +200,7 @@ body
                 height: 100%;
                 background-color: #FFFFFF;
                 left: 0%;
+                transition: $toggle-control-speed;
             }
             .prawy{
                 right: 0%;
@@ -158,13 +208,8 @@ body
                 width: 66%;
                 height: 100%;
                 background-color: #222222;
-                // .prawy2{
-                //     position: absolute;
-                //     width: 100%;
-                //     height: 100%;
-                //     background-color: rgba(0, 0, 0, 0.521);
-                //     // display: none;
-                // }
+                transition: $toggle-control-speed;
+               
             }
             .glowne{
                 position: absolute;
@@ -203,7 +248,8 @@ body
                     mix-blend-mode: difference;
                 }
                 .linia{
-                    border: 0.5px solid  #222222;
+                    border: 0.5px solid  #fffefe;
+                    mix-blend-mode: difference;
                     position: absolute;
                     left: 0;
                     top:50%;

@@ -1,5 +1,37 @@
 body {
+  cursor: none;
   margin: 0;
+}
+
+body .cursor-dot,
+body .cursor-dot-outline {
+  z-index: 2;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+body .cursor-dot {
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  mix-blend-mode: difference;
+}
+
+body .cursor-dot-outline {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  mix-blend-mode: difference;
 }
 
 body .tlo {
@@ -31,6 +63,8 @@ body .tlo .cont .naglowek .n_lewy {
   height: 100%;
   left: 0%;
   background-color: #FFFFFF;
+  -webkit-transition: 0.15s;
+  transition: 0.15s;
 }
 
 body .tlo .cont .naglowek .n_prawy {
@@ -38,6 +72,8 @@ body .tlo .cont .naglowek .n_prawy {
   height: 100%;
   right: 0%;
   background-color: #3C3B3A;
+  -webkit-transition: 0.15s;
+  transition: 0.15s;
 }
 
 body .tlo .cont .naglowek .sekcje {
@@ -115,9 +151,12 @@ body .tlo .cont .naglowek .sekcje2 .ikony .link {
 }
 
 body .tlo .cont .naglowek .sekcje2 .ikony .link:hover {
-  color: #d4d4d4;
+  height: 110%;
+  width: 110%;
   -webkit-box-shadow: 0px 25px 65px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 25px 65px rgba(0, 0, 0, 0.15);
+  -webkit-transition: 0.15s;
+  transition: 0.15s;
 }
 
 body .tlo .cont .naglowek .sekcje2 .p_zone {
@@ -144,7 +183,7 @@ body .tlo .cont .naglowek .sekcje2 .p_zone .przycisk {
 
 body .tlo .cont .naglowek .sekcje2 .p_zone .przycisk .p_tlo {
   width: 40px;
-  height: 22.5px;
+  height: 20px;
   background-color: #d6d6d6;
   border-radius: 93px;
   display: -webkit-box;
@@ -158,14 +197,13 @@ body .tlo .cont .naglowek .sekcje2 .p_zone .przycisk .p_tlo {
 body .tlo .cont .naglowek .sekcje2 .p_zone .przycisk .p_tlo .p_kropka {
   position: absolute;
   background: #3C3B3A;
-  border-radius: 93px;
-  width: 17.0px;
-  height: 17px;
-  right: 3px;
-}
-
-body .tlo .cont .naglowek .sekcje2 .p_zone .przycisk:hover {
-  cursor: pointer;
+  border-radius: 100px;
+  width: 20px;
+  height: 20px;
+  right: 0px;
+  border: 1px solid #b3b1b1;
+  -webkit-transition: 0.15s;
+  transition: 0.15s;
 }
 
 body .tlo .cont .lewy {
@@ -174,6 +212,8 @@ body .tlo .cont .lewy {
   height: 100%;
   background-color: #FFFFFF;
   left: 0%;
+  -webkit-transition: 0.15s;
+  transition: 0.15s;
 }
 
 body .tlo .cont .prawy {
@@ -182,6 +222,8 @@ body .tlo .cont .prawy {
   width: 66%;
   height: 100%;
   background-color: #222222;
+  -webkit-transition: 0.15s;
+  transition: 0.15s;
 }
 
 body .tlo .cont .glowne {
@@ -227,7 +269,8 @@ body .tlo .cont .glowne .wstep {
 }
 
 body .tlo .cont .glowne .linia {
-  border: 0.5px solid  #222222;
+  border: 0.5px solid  #fffefe;
+  mix-blend-mode: difference;
   position: absolute;
   left: 0;
   top: 50%;

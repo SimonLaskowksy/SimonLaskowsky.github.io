@@ -14,9 +14,11 @@
     <link rel="stylesheet" href="fontello.css">
 </head>
 <body>
+   
     <div class="tlo">
         <div class="cont">
             <div class="naglowek">
+                
                 <div class="n_lewy">
 
                 </div>
@@ -80,7 +82,16 @@
             </div>
         </div>
     </div>
+    <!-- custom cursor -->
+    <div class="cursor-dot-outline"></div>
+    <div class="cursor-dot"></div>
+
     <script>
+        window.addEventListener('scroll', () => {
+        document.body.style.setProperty('--scroll',window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
+        }, false);
+
+
         // let l = document.querySelector(".lewy");
         // let p = document.querySelector(".prawy");
         // let y = document.querySelector(".cont");
@@ -88,6 +99,7 @@
         //     l.style.background = p.style.background;
         //     p.style.background = l.style.background;
         // };
+ 
 
         let dark = document.querySelector(".darkmode");
         let tlo = document.querySelector(".p_tlo");
@@ -101,6 +113,7 @@
         let isDark = true;
         document.querySelector(".przycisk").onclick = () =>{
             if(isDark){
+                
                 l.style.backgroundColor = "#222222";
                 p.style.backgroundColor = "#FFFFFF";
                 nl.style.backgroundColor = "#3C3B3A";
@@ -109,8 +122,6 @@
                 tlo.style.backgroundColor = "#3C3B3A";
                 kropka.style.backgroundColor = "#FFFFFF";
                 kropka.style.right = '19.0px';
-                kropka.style.width = '17.0px';
-                kropka.style.height = '16.0px';
                 dark.style.color = '#3C3B3A';
             }
             else{
@@ -120,14 +131,145 @@
                 np.style.backgroundColor = "#3C3B3A";
                 lo.style.color = '#3C3B3A';
                 tlo.style.backgroundColor = "#FFFFFF";
-                kropka.style.backgroundColor = "#3C3B3A";
-                kropka.style.right = '3px';
+                kropka.style.backgroundColor = "#3C3B3A";   
+                kropka.style.right = '0px';
                 dark.style.color = '#FAF4E6';
             }
             isDark = !isDark;
 
         }
+    
+        //custom cursor
+    
+    var cursor = {
+    delay: 8,
+    _x: 0,
+    _y: 0,
+    endX: (window.innerWidth / 2),
+    endY: (window.innerHeight / 2),
+    cursorVisible: true,
+    cursorEnlarged: false,
+    $dot: document.querySelector('.cursor-dot'),
+    $outline: document.querySelector('.cursor-dot-outline'),
+    
+    init: function() {
+        // Set up element sizes
+        this.dotSize = this.$dot.offsetWidth;
+        this.outlineSize = this.$outline.offsetWidth;
         
-    </script>
+        this.setupEventListeners();
+        this.animateDotOutline();
+    },
+    
+//     updateCursor: function(e) {
+//         var self = this;
+        
+//         console.log(e)
+        
+//         // Show the cursor
+//         self.cursorVisible = true;
+//         self.toggleCursorVisibility();
+
+//         // Position the dot
+//         self.endX = e.pageX;
+//         self.endY = e.pageY;
+//         self.$dot.style.top = self.endY + 'px';
+//         self.$dot.style.left = self.endX + 'px';
+//     },
+    
+    setupEventListeners: function() {
+        var self = this;
+        
+        // Anchor hovering
+        document.querySelectorAll('a').forEach(function(el) {
+            el.addEventListener('mouseover', function() {
+                self.cursorEnlarged = true;
+                self.toggleCursorSize();
+            });
+            el.addEventListener('mouseout', function() {
+                self.cursorEnlarged = false;
+                self.toggleCursorSize();
+            });
+        });
+        
+        // Click events
+        document.addEventListener('mousedown', function() {
+            self.cursorEnlarged = true;
+            self.toggleCursorSize();
+        });
+        document.addEventListener('mouseup', function() {
+            self.cursorEnlarged = false;
+            self.toggleCursorSize();
+        });
+  
+  
+        document.addEventListener('mousemove', function(e) {
+            // Show the cursor
+            self.cursorVisible = true;
+            self.toggleCursorVisibility();
+
+            // Position the dot
+            self.endX = e.pageX;
+            self.endY = e.pageY;
+            self.$dot.style.top = self.endY + 'px';
+            self.$dot.style.left = self.endX + 'px';
+        });
+        
+        // Hide/show cursor
+        document.addEventListener('mouseenter', function(e) {
+            self.cursorVisible = true;
+            self.toggleCursorVisibility();
+            self.$dot.style.opacity = 1;
+            self.$outline.style.opacity = 1;
+        });
+        
+        document.addEventListener('mouseleave', function(e) {
+            self.cursorVisible = true;
+            self.toggleCursorVisibility();
+            self.$dot.style.opacity = 0;
+            self.$outline.style.opacity = 0;
+        });
+    },
+    
+    animateDotOutline: function() {
+        var self = this;
+        
+        self._x += (self.endX - self._x) / self.delay;
+        self._y += (self.endY - self._y) / self.delay;
+        self.$outline.style.top = self._y + 'px';
+        self.$outline.style.left = self._x + 'px';
+        
+        requestAnimationFrame(this.animateDotOutline.bind(self));
+    },
+    
+    toggleCursorSize: function() {
+        var self = this;
+        
+        if (self.cursorEnlarged) {
+            self.$dot.style.transform = 'translate(-50%, -50%) scale(0.75)';
+            self.$outline.style.transform = 'translate(-50%, -50%) scale(1.5)';
+        } else {
+            self.$dot.style.transform = 'translate(-50%, -50%) scale(1)';
+            self.$outline.style.transform = 'translate(-50%, -50%) scale(1)';
+        }
+    },
+    
+    toggleCursorVisibility: function() {
+        var self = this;
+        
+        if (self.cursorVisible) {
+            self.$dot.style.opacity = 1;
+            self.$outline.style.opacity = 1;
+        } else {
+            self.$dot.style.opacity = 0;
+            self.$outline.style.opacity = 0;
+        }
+    }
+}
+
+cursor.init();
+
+
+</script>
 </body>
 </html>
