@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="fontello.css">
+    
 </head>
 <body>
    
@@ -46,10 +47,7 @@
                         </a>
                     </div>
                     <div class="p_zone">
-                        <div class="darkmode">
-                            Dark mode: 
-                        </div>
-                        <div class="przycisk" >
+                        <div class="przycisk">
                             <div class="p_tlo">
                                 <div class="p_kropka" >
 
@@ -66,6 +64,7 @@
             <div class="prawy">
                 <!-- <div class="prawy2"></div> -->
             </div>
+            <!-- o mnie -->
             <div class="glowne">
                 <div class="awatar">
 
@@ -77,9 +76,48 @@
 
                 </div>
                 <div class="tekst">
-                    Jestem początkującym Front-End Developerem. Tworzenie stron internetowych jest dla mnie pasją, którą odkryłem w liceum informatycznym. Wtedy właśnie zorientowałem się że zamiast zwykłego programowania wolę tworzyć strony internetowe. Od tamtej pory staram się poszerzać własne horyzonty, i skrupulatnie dąże do samorealizacji na tej płaszczyźnie. Moja wiedza oraz umiejętności zostały znacznie aktualizowane po ukończeniu szkolenia na Front-End Developera, które ukończyłem 11.03.2021. Strona ta, stworzona przeze mnie jest prezentacją moich umiejętności, postawiłem na minimalizm oraz dosyć oryginalną funkcję zmiany koloru za pomocą przycisku.
+                    Witam Cię serdecznie na mojej stronie, jest tu dosyć minimalistycznie, fakt.
+                    <br> Mam nadzieję że lubisz czarno biały styl. Jeżeli nie, możesz go szybko zmienić za pomocą przycisku...
+                    <br> Na biało czarny :) <br>
+                    <div id="tekst_pojawienie">
+                        Pobawiłeś się? <br> Teraz chodź na dół, znajdziesz tam parę przydatnych informacji o mnie.
+                        <br> Zapraszam!
+                    </div>
                 </div>
             </div>
+            <!-- moje umiejętności -->
+            <div class="glowne2">
+                <div class="wstep2">
+                    Trochę o mnie
+                </div>
+                <div class="linia2">
+
+                </div>
+                <div class="tekst2">
+                    Projektowanie, design, sztuka, muzyka, oto moje zainteresowania. Liceum natomiast wybrałem informatyczne, dlaczego? <br> Sam nie wiem, coś mnie popchnęło w tym kierunku, cała ta otoczka zawodu przyszłości, ta tajemniczość programowania, czym jest, na czym polega. Chciałem zwyczajnie spróbować czegos innego, pójść w bardziej oryginalnym kierunku niż architekt bądź lekarz. <br>
+                    Wracając do zaiteresowań, od zawsze miałem duszę artysty kierunek edukacji obrałem natomiast taki który nie daje upustu kreatywności, lecz do czasu. <br>
+                    Nadchodzi trzeci rok liceum, nauczyciel robi nam dodatkowe lekcje w wakacje i pyta "Czego chcecie się nauczyć?" <br>
+                    My cisza, sami tak naprawde nie wiemy, chceliśmy się tylko podlizać chodząc na jego lekcje nawet w wakacje. <br>
+                    Na to on "To spróbujemy stron internetowych HTML, CSS, JS, takie tam szybko ogarniecie". <br>
+                    I tutaj pojawia moment klucz, odkrywam swoją drogę, kropki się łączą i ja już wiem co chce robić w życiu.Mogę dać upust kreatywności, mogę tworzyć, projektować i co najlepsze mogę przełożyć to na pracę. <br>
+                    Liceum ukończyłem, miłość do Front-Endu pozostała. Zdecydowałem się na kurs, szkolenie 80 godzinne, czasu teoretycznie mało ale wiedzy wyniosłem mnóstwo. Dzięki niemu aktualnie jestem na etapie w którym samodzielnie tworzę strony jak ta bez większych problemów. <br>
+                    Natomiast od tego co umiem a czego nie umiem stworzyłem osobny podpunkt poniżej. Jeżeli nie masz mnie jeszcze dosyć to zapraszam poniżej! 
+
+                </div>
+            </div>
+            <!-- moje inne projekty -->
+            <div class="glowne3">
+                <div class="wstep3">
+                    Moje umiejętności
+                </div>
+                <div class="linia3">
+
+                </div>
+                <div class="tekst3">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, laboriosam nostrum qui, ullam nulla, ad laborum dolore quidem fugit quaerat debitis quis vel ratione dolor sint fuga quas iusto commodi.
+                </div>
+            </div>
+            <div class="stopka"></div>
         </div>
     </div>
     <!-- custom cursor -->
@@ -87,21 +125,11 @@
     <div class="cursor-dot"></div>
 
     <script>
+
         window.addEventListener('scroll', () => {
         document.body.style.setProperty('--scroll',window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
         }, false);
 
-
-        // let l = document.querySelector(".lewy");
-        // let p = document.querySelector(".prawy");
-        // let y = document.querySelector(".cont");
-        // y.onmouseover = () =>{
-        //     l.style.background = p.style.background;
-        //     p.style.background = l.style.background;
-        // };
- 
-
-        let dark = document.querySelector(".darkmode");
         let tlo = document.querySelector(".p_tlo");
         let kropka = document.querySelector(".p_kropka");
         let lo = document.querySelector(".logo");
@@ -111,9 +139,16 @@
         let nl = document.querySelector(".n_lewy");
         let np = document.querySelector(".n_prawy");
         let isDark = true;
+        let tekst_pojawienie = document.getElementById('tekst_pojawienie');
+
+        document.getElementById("tekst_pojawienie").hidden=true;
+
         document.querySelector(".przycisk").onclick = () =>{
+
+            //document.getElementById("tekst_pojawienie").hidden=false;
+
             if(isDark){
-                
+
                 l.style.backgroundColor = "#222222";
                 p.style.backgroundColor = "#FFFFFF";
                 nl.style.backgroundColor = "#3C3B3A";
@@ -122,9 +157,10 @@
                 tlo.style.backgroundColor = "#3C3B3A";
                 kropka.style.backgroundColor = "#FFFFFF";
                 kropka.style.right = '19.0px';
-                dark.style.color = '#3C3B3A';
+    
             }
             else{
+
                 l.style.backgroundColor = "#FFFFFF";
                 p.style.backgroundColor = "#222222";
                 nl.style.backgroundColor = "#FFFFFF";
@@ -133,143 +169,127 @@
                 tlo.style.backgroundColor = "#FFFFFF";
                 kropka.style.backgroundColor = "#3C3B3A";   
                 kropka.style.right = '0px';
-                dark.style.color = '#FAF4E6';
+                
+                document.getElementById("tekst_pojawienie").hidden=false;
+                
             }
+
             isDark = !isDark;
-
         }
-    
-        //custom cursor
-    
-    var cursor = {
-    delay: 8,
-    _x: 0,
-    _y: 0,
-    endX: (window.innerWidth / 2),
-    endY: (window.innerHeight / 2),
-    cursorVisible: true,
-    cursorEnlarged: false,
-    $dot: document.querySelector('.cursor-dot'),
-    $outline: document.querySelector('.cursor-dot-outline'),
-    
-    init: function() {
-        // Set up element sizes
-        this.dotSize = this.$dot.offsetWidth;
-        this.outlineSize = this.$outline.offsetWidth;
-        
-        this.setupEventListeners();
-        this.animateDotOutline();
-    },
-    
-//     updateCursor: function(e) {
-//         var self = this;
-        
-//         console.log(e)
-        
-//         // Show the cursor
-//         self.cursorVisible = true;
-//         self.toggleCursorVisibility();
 
-//         // Position the dot
-//         self.endX = e.pageX;
-//         self.endY = e.pageY;
-//         self.$dot.style.top = self.endY + 'px';
-//         self.$dot.style.left = self.endX + 'px';
-//     },
-    
-    setupEventListeners: function() {
-        var self = this;
+        //custom cursor
+        var cursor = {
+        delay: 8,
+        _x: 0,
+        _y: 0,
+        endX: (window.innerWidth / 2),
+        endY: (window.innerHeight / 2),
+        cursorVisible: true,
+        cursorEnlarged: false,
+        $dot: document.querySelector('.cursor-dot'),
+        $outline: document.querySelector('.cursor-dot-outline'),
         
-        // Anchor hovering
-        document.querySelectorAll('a').forEach(function(el) {
-            el.addEventListener('mouseover', function() {
+        init: function() {
+            // Set up element sizes
+            this.dotSize = this.$dot.offsetWidth;
+            this.outlineSize = this.$outline.offsetWidth;
+            
+            this.setupEventListeners();
+            this.animateDotOutline();
+        },
+    
+        setupEventListeners: function() {
+            var self = this;
+            
+            // Anchor hovering
+            document.querySelectorAll('a').forEach(function(el) {
+                el.addEventListener('mouseover', function() {
+                    self.cursorEnlarged = true;
+                    self.toggleCursorSize();
+                });
+                el.addEventListener('mouseout', function() {
+                    self.cursorEnlarged = false;
+                    self.toggleCursorSize();
+                });
+            });
+            
+            // Click events
+            document.addEventListener('mousedown', function() {
                 self.cursorEnlarged = true;
                 self.toggleCursorSize();
             });
-            el.addEventListener('mouseout', function() {
+            document.addEventListener('mouseup', function() {
                 self.cursorEnlarged = false;
                 self.toggleCursorSize();
             });
-        });
-        
-        // Click events
-        document.addEventListener('mousedown', function() {
-            self.cursorEnlarged = true;
-            self.toggleCursorSize();
-        });
-        document.addEventListener('mouseup', function() {
-            self.cursorEnlarged = false;
-            self.toggleCursorSize();
-        });
-  
-  
-        document.addEventListener('mousemove', function(e) {
-            // Show the cursor
-            self.cursorVisible = true;
-            self.toggleCursorVisibility();
+    
+    
+            document.addEventListener('mousemove', function(e) {
+                // Show the cursor
+                self.cursorVisible = true;
+                self.toggleCursorVisibility();
 
-            // Position the dot
-            self.endX = e.pageX;
-            self.endY = e.pageY;
-            self.$dot.style.top = self.endY + 'px';
-            self.$dot.style.left = self.endX + 'px';
-        });
+                // Position the dot
+                self.endX = e.pageX;
+                self.endY = e.pageY;
+                self.$dot.style.top = self.endY + 'px';
+                self.$dot.style.left = self.endX + 'px';
+            });
+            
+            // Hide/show cursor
+            document.addEventListener('mouseenter', function(e) {
+                self.cursorVisible = true;
+                self.toggleCursorVisibility();
+                self.$dot.style.opacity = 1;
+                self.$outline.style.opacity = 1;
+            });
+            
+            document.addEventListener('mouseleave', function(e) {
+                self.cursorVisible = true;
+                self.toggleCursorVisibility();
+                self.$dot.style.opacity = 0;
+                self.$outline.style.opacity = 0;
+            });
+        },
         
-        // Hide/show cursor
-        document.addEventListener('mouseenter', function(e) {
-            self.cursorVisible = true;
-            self.toggleCursorVisibility();
-            self.$dot.style.opacity = 1;
-            self.$outline.style.opacity = 1;
-        });
+        animateDotOutline: function() {
+            var self = this;
+            
+            self._x += (self.endX - self._x) / self.delay;
+            self._y += (self.endY - self._y) / self.delay;
+            self.$outline.style.top = self._y + 'px';
+            self.$outline.style.left = self._x + 'px';
+            
+            requestAnimationFrame(this.animateDotOutline.bind(self));
+        },
         
-        document.addEventListener('mouseleave', function(e) {
-            self.cursorVisible = true;
-            self.toggleCursorVisibility();
-            self.$dot.style.opacity = 0;
-            self.$outline.style.opacity = 0;
-        });
-    },
-    
-    animateDotOutline: function() {
-        var self = this;
+        toggleCursorSize: function() {
+            var self = this;
+            
+            if (self.cursorEnlarged) {
+                self.$dot.style.transform = 'translate(-50%, -50%) scale(0.75)';
+                self.$outline.style.transform = 'translate(-50%, -50%) scale(1.5)';
+            } else {
+                self.$dot.style.transform = 'translate(-50%, -50%) scale(1)';
+                self.$outline.style.transform = 'translate(-50%, -50%) scale(1)';
+            }
+        },
         
-        self._x += (self.endX - self._x) / self.delay;
-        self._y += (self.endY - self._y) / self.delay;
-        self.$outline.style.top = self._y + 'px';
-        self.$outline.style.left = self._x + 'px';
-        
-        requestAnimationFrame(this.animateDotOutline.bind(self));
-    },
-    
-    toggleCursorSize: function() {
-        var self = this;
-        
-        if (self.cursorEnlarged) {
-            self.$dot.style.transform = 'translate(-50%, -50%) scale(0.75)';
-            self.$outline.style.transform = 'translate(-50%, -50%) scale(1.5)';
-        } else {
-            self.$dot.style.transform = 'translate(-50%, -50%) scale(1)';
-            self.$outline.style.transform = 'translate(-50%, -50%) scale(1)';
-        }
-    },
-    
-    toggleCursorVisibility: function() {
-        var self = this;
-        
-        if (self.cursorVisible) {
-            self.$dot.style.opacity = 1;
-            self.$outline.style.opacity = 1;
-        } else {
-            self.$dot.style.opacity = 0;
-            self.$outline.style.opacity = 0;
+        toggleCursorVisibility: function() {
+            var self = this;
+            
+            if (self.cursorVisible) {
+                self.$dot.style.opacity = 1;
+                self.$outline.style.opacity = 1;
+            } else {
+                self.$dot.style.opacity = 0;
+                self.$outline.style.opacity = 0;
+            }
         }
     }
-}
 
-cursor.init();
+        cursor.init();
 
-
-</script>
+    </script>
 </body>
 </html>

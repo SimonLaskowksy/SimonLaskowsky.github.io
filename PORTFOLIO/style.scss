@@ -1,5 +1,6 @@
 //predkosc animacji 
 $toggle-control-speed: 0.15s;
+$predkosc-sekundy: 10s;
 $primary: #dc5656;
 $primary-ultralight: mix(white, $primary, 80%);
 $primary-light: mix(white, $primary, 25%);
@@ -46,7 +47,7 @@ body
     .tlo{
         //padding:5px;
         background-color: #222222;
-        height: 100vh;
+        height: 400vh;
         .cont{
             //border-radius: 30px;
             height: 100%;
@@ -59,7 +60,7 @@ body
                 display: flex;
                 top: 0%;
                 width: 100%;
-                height: 5.7%;
+                height: 1.43%;
                 box-shadow: 0px 25px 65px rgba(0, 0, 0, 0.15);
                 
                 .n_lewy{
@@ -154,16 +155,6 @@ body
                     .p_zone{
                         position: relative;
                         display: flex;
-                        
-                        .darkmode{
-                            display: flex;
-                            margin-left:45px;
-                            font-family: Be Vietnam;
-                            font-style: normal;
-                            font-weight: normal;
-                            font-size: 14px;
-                            //line-height: 18px;
-                        }
                         .przycisk{
                             margin-left: 10px;
                             .p_tlo{
@@ -214,9 +205,9 @@ body
             .glowne{
                 position: absolute;
                 width: 66.8%;
-                height: 70%;
+                height: 17.5%;
                 left: 16.5%;
-                top: 16.8%;
+                top: 4.2%;
                 .awatar{
                     width: 100px;
                     height: 100px;
@@ -259,17 +250,108 @@ body
                     position: absolute;
                     left: 0;
                     top:60%;
-
-                    
                     font-family: Be Vietnam;
                     font-style: normal;
                     font-weight: normal;
                     font-size: 17px;
                     line-height: 25px;
                     color: white;
-                    color: #d6d6d6;
                     mix-blend-mode: difference;
 
+                }
+                #tekst_pojawienie{
+                    transition: $predkosc-sekundy;
+                }
+            }
+            .glowne2{
+                position: absolute;
+                width: 66.8%;
+                height: 17.5%;
+                left: 16.5%;
+                top:25%;
+                .wstep2{
+                    position: absolute;
+                    right: 0;
+                    top: 0%;
+
+                    font-family: EB Garamond;
+                    font-style: normal;
+                    font-weight: bold;
+                    //font-size: 70px;
+                    font-size:8vh;
+                    line-height: 100%;
+                    /* or 70px */
+                    display: flex;
+                    align-items: center;
+                    letter-spacing: -0.02em;
+                    color: white;
+                    mix-blend-mode: difference;
+                }
+                .linia2{
+                    border: 0.5px solid  #fffefe;
+                    mix-blend-mode: difference;
+                    position: absolute;
+                    right: 0;
+                    top:20%;
+                    width: 20%;
+                }
+                .tekst2{
+                    position: absolute;
+                    right: 0;
+                    top:30%;
+                    font-family: Be Vietnam;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 17px;
+                    line-height: 25px;
+                    color: white;
+                    mix-blend-mode: difference;
+                    text-align:right;
+                }
+            }
+            .glowne3{
+                position: absolute;
+                width: 66.8%;
+                height: 17.5%;
+                left: 16.5%;
+                top:50%;
+                .wstep3{
+                    position: absolute;
+                    left: 0;
+                    top: 0%;
+
+                    font-family: EB Garamond;
+                    font-style: normal;
+                    font-weight: bold;
+                    //font-size: 70px;
+                    font-size:8vh;
+                    line-height: 100%;
+                    /* or 70px */
+                    display: flex;
+                    align-items: center;
+                    letter-spacing: -0.02em;
+                    color: white;
+                    mix-blend-mode: difference;
+                }
+                .linia3{
+                    border: 0.5px solid  #fffefe;
+                    mix-blend-mode: difference;
+                    position: absolute;
+                    left: 0;
+                    top:20%;
+                    width: 20%;
+                }
+                .tekst3{
+                    position: absolute;
+                    left: 0;
+                    top:30%;
+                    font-family: Be Vietnam;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 17px;
+                    line-height: 25px;
+                    color: white;
+                    mix-blend-mode: difference;
                 }
             }
         }
