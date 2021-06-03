@@ -204,8 +204,7 @@ body
     }
         .cont{
             height: 150vh; 
-            //border-radius: 30px;
-            //height: 100%;
+            
             position: relative;
 
             @include media('<=450px'){
@@ -215,9 +214,7 @@ body
                 height: 210vh;
             }
 
-            // @include media('<=1400px'){
-            //     height: 200vh;
-            // }
+            
             
             .lewy{
                 top: 0;
@@ -250,6 +247,7 @@ body
                 margin-left: auto;
                 margin-right: auto;
                 top: 3%;
+                //padding-bottom: 1000px;
 
                 @include media('<=992px'){
                     width: 790px;
@@ -298,10 +296,12 @@ body
                     
                 }
                 .wstep{
+                    margin-top: 0.5em;
+                    margin-bottom: 0.3em;
                     width: 80%;
-                    position: absolute;
+                    position: relative;
                     left: 0;
-                    top: 9%;
+                    //top: 9%;
                     font-family: EB Garamond;
                     font-style: normal;
                     font-weight: 800;
@@ -313,57 +313,61 @@ body
                     color: #0065FF;
                     transition:  1.5s ease-in-out;
 
-                    @include media('<=992px'){
-                        top:7%
-                    }
+                    // @include media('<=992px'){
+                    //     top:7%
+                    // }
 
                     @include media('<=tablet'){
                         font-size: 2.2em;
-                        top: 6%;
+                        
                         
                     }
-                    @include media('<=450px'){
-                        top: 5%;
-                    }
+                    // @include media('<=450px'){
+                    //     top: 5%;
+                    // }
                     @include media('<=370px'){
-                        top: 4.5%;
+                    
                         width: 100%;
                     }
                     
                 }
                 .linia{
+                    margin-top: 80px;
+                    margin-bottom: 80px;
                     border: 0.5px solid  #0065FF;
-                    position: absolute;
+                    position: relative;
                     left: 0;
-                    top:32%;
+                    //top:32%;
                     width: 15%;
                     transition:  1.5s ease-in-out;
 
-                    @include media('<=992px'){
-                        top:30%;    
-                    }
-                    @include media('<=830px'){
-                        top:34.5%;
-                    }
-                    @include media('<=tablet'){
-                        top: 20%;
-                    }
-                    @include media('<=450px'){
-                        top: 19%;
-                    }
-                    @include media('<=370px'){
-                        top: 15%;
-                    }
-                    @include media('<=360px'){
-                        top: 17%;
-                    }
+                    // @include media('<=992px'){
+                    //     top:30%;    
+                    // }
+                    // @include media('<=830px'){
+                    //     top:34.5%;
+                    // }
+                    // @include media('<=tablet'){
+                    //     top: 20%;
+                    // }
+                    // @include media('<=450px'){
+                    //     top: 19%;
+                    // }
+                    // @include media('<=370px'){
+                    //     top: 15%;
+                    // }
+                    // @include media('<=360px'){
+                    //     top: 17%;
+                    // }
                     
                     
                 }
                 .tekst{
-                    position: absolute;
+                    margin-top: 10px;
+                    margin-bottom: 1rem;
+                    position: relative;
                     left: 0;
-                    top:37%;
+                    //top:37%;
                     font-family: 'Be Vietnam', sans-serif;
                     font-weight: 400;
                     font-size: 1.2em;
@@ -373,32 +377,34 @@ body
                     letter-spacing: -0.01em;
                     transition:  1.5s ease-in-out;
 
-                    @include media('<=992px'){
-                        top:35%;
-                    }
-                    @include media('<=830px'){
-                        top:40%;
-                    }
-                    @include media('<=tablet'){
-                        top: 24%;
-                    }
-                    @include media('<=450px'){
-                        top: 23%;
-                    }
-                    @include media('<=370px'){
-                        top: 18%;
-                    }
-                    @include media('<=360px'){
-                        top: 21%;
-                    }
+                    // @include media('<=992px'){
+                    //     top:35%;
+                    // }
+                    // @include media('<=830px'){
+                    //     top:40%;
+                    // }
+                    // @include media('<=tablet'){
+                    //     top: 24%;
+                    // }
+                    // @include media('<=450px'){
+                    //     top: 23%;
+                    // }
+                    // @include media('<=370px'){
+                    //     top: 18%;
+                    // }
+                    // @include media('<=360px'){
+                    //     top: 21%;
+                    // }
                     
 
                 }
             
                 .label{
+                    margin-top: 1rem;
+                    margin-bottom: 0.5rem;
                     display: flex;
-                    position: absolute;
-                    top:70%;
+                    position: relative;
+                    //top:70%;
                     background-color: #f8f9fa;
                     border-radius: 10px;
                     padding: 1.5rem;
@@ -407,25 +413,25 @@ body
                     transition:  1.5s ease-in-out;
                     font-size: 0.9em;
 
-                    @include media('<=992px'){
-                        top: 72.5%;
-                    }
+                    // @include media('<=992px'){
+                    //     top: 72.5%;
+                    // }
 
-                    @include media('<=830px'){
-                        top: 83%;
-                    }
-                    @include media('<=tablet'){
-                        top: 70%;
-                    }
-                    @include media('<=645px'){
-                        top: 79%;
-                    }
-                    @include media('<=540px'){
-                        top: 90%;
-                    }
-                    @include media('<=360px'){
-                        top: 96%;
-                    }
+                    // @include media('<=830px'){
+                    //     top: 83%;
+                    // }
+                    // @include media('<=tablet'){
+                    //     top: 70%;
+                    // }
+                    // @include media('<=645px'){
+                    //     top: 79%;
+                    // }
+                    // @include media('<=540px'){
+                    //     top: 90%;
+                    // }
+                    // @include media('<=360px'){
+                    //     top: 96%;
+                    // }
                     
                     
                     .label_link{
@@ -436,32 +442,34 @@ body
                     
                 }
                 .linia2{
+                    margin-top: 80px;
+                    margin-bottom: 80px;
                     border: 0.5px solid  #0065FF;
-                    position: absolute;
+                    position: relative;
                     left: 0;
-                    top:80%;
+                    //top:80%;
                     width: 100%;
                     transition:  1.5s ease-in-out;
-                    margin-bottom: 30px;
+                    
 
-                    @include media('<=992px'){
-                        top:85%;
-                    }
-                    @include media('<=830px'){
-                        top: 95%;
-                    }
-                    @include media('<=tablet'){
-                        top: 80%;
-                    }
-                    @include media('<=645px'){
-                        top: 90%;
-                    }
-                    @include media('<=540px'){
-                        top:100%;
-                    }
-                    @include media('<=360px'){
-                        top: 105%;
-                    }
+                    // @include media('<=992px'){
+                    //     top:85%;
+                    // }
+                    // @include media('<=830px'){
+                    //     top: 95%;
+                    // }
+                    // @include media('<=tablet'){
+                    //     top: 80%;
+                    // }
+                    // @include media('<=645px'){
+                    //     top: 90%;
+                    // }
+                    // @include media('<=540px'){
+                    //     top:100%;
+                    // }
+                    // @include media('<=360px'){
+                    //     top: 105%;
+                    // }
                   
                 }
             }

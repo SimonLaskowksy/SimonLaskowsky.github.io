@@ -336,10 +336,11 @@ body .cont .glowne .awatar {
 }
 
 body .cont .glowne .wstep {
+  margin-top: 0.5em;
+  margin-bottom: 0.3em;
   width: 80%;
-  position: absolute;
+  position: relative;
   left: 0;
-  top: 9%;
   font-family: EB Garamond;
   font-style: normal;
   font-weight: 800;
@@ -357,82 +358,34 @@ body .cont .glowne .wstep {
   transition: 1.5s ease-in-out;
 }
 
-@media (max-width: 992px) {
-  body .cont .glowne .wstep {
-    top: 7%;
-  }
-}
-
 @media (max-width: 768px) {
   body .cont .glowne .wstep {
     font-size: 2.2em;
-    top: 6%;
-  }
-}
-
-@media (max-width: 450px) {
-  body .cont .glowne .wstep {
-    top: 5%;
   }
 }
 
 @media (max-width: 370px) {
   body .cont .glowne .wstep {
-    top: 4.5%;
     width: 100%;
   }
 }
 
 body .cont .glowne .linia {
+  margin-top: 80px;
+  margin-bottom: 80px;
   border: 0.5px solid  #0065FF;
-  position: absolute;
+  position: relative;
   left: 0;
-  top: 32%;
   width: 15%;
   -webkit-transition: 1.5s ease-in-out;
   transition: 1.5s ease-in-out;
 }
 
-@media (max-width: 992px) {
-  body .cont .glowne .linia {
-    top: 30%;
-  }
-}
-
-@media (max-width: 830px) {
-  body .cont .glowne .linia {
-    top: 34.5%;
-  }
-}
-
-@media (max-width: 768px) {
-  body .cont .glowne .linia {
-    top: 20%;
-  }
-}
-
-@media (max-width: 450px) {
-  body .cont .glowne .linia {
-    top: 19%;
-  }
-}
-
-@media (max-width: 370px) {
-  body .cont .glowne .linia {
-    top: 15%;
-  }
-}
-
-@media (max-width: 360px) {
-  body .cont .glowne .linia {
-    top: 17%;
-  }
-}
-
 body .cont .glowne .tekst {
-  position: absolute;
+  margin-top: 10px;
+  margin-bottom: 1rem;
+  position: relative;
   left: 0;
-  top: 37%;
   font-family: 'Be Vietnam', sans-serif;
   font-weight: 400;
   font-size: 1.2em;
@@ -443,48 +396,13 @@ body .cont .glowne .tekst {
   transition: 1.5s ease-in-out;
 }
 
-@media (max-width: 992px) {
-  body .cont .glowne .tekst {
-    top: 35%;
-  }
-}
-
-@media (max-width: 830px) {
-  body .cont .glowne .tekst {
-    top: 40%;
-  }
-}
-
-@media (max-width: 768px) {
-  body .cont .glowne .tekst {
-    top: 24%;
-  }
-}
-
-@media (max-width: 450px) {
-  body .cont .glowne .tekst {
-    top: 23%;
-  }
-}
-
-@media (max-width: 370px) {
-  body .cont .glowne .tekst {
-    top: 18%;
-  }
-}
-
-@media (max-width: 360px) {
-  body .cont .glowne .tekst {
-    top: 21%;
-  }
-}
-
 body .cont .glowne .label {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: absolute;
-  top: 70%;
+  position: relative;
   background-color: #f8f9fa;
   border-radius: 10px;
   padding: 1.5rem;
@@ -492,42 +410,6 @@ body .cont .glowne .label {
   -webkit-transition: 1.5s ease-in-out;
   transition: 1.5s ease-in-out;
   font-size: 0.9em;
-}
-
-@media (max-width: 992px) {
-  body .cont .glowne .label {
-    top: 72.5%;
-  }
-}
-
-@media (max-width: 830px) {
-  body .cont .glowne .label {
-    top: 83%;
-  }
-}
-
-@media (max-width: 768px) {
-  body .cont .glowne .label {
-    top: 70%;
-  }
-}
-
-@media (max-width: 645px) {
-  body .cont .glowne .label {
-    top: 79%;
-  }
-}
-
-@media (max-width: 540px) {
-  body .cont .glowne .label {
-    top: 90%;
-  }
-}
-
-@media (max-width: 360px) {
-  body .cont .glowne .label {
-    top: 96%;
-  }
 }
 
 body .cont .glowne .label .label_link {
@@ -538,49 +420,13 @@ body .cont .glowne .label .label_link {
 }
 
 body .cont .glowne .linia2 {
+  margin-top: 80px;
+  margin-bottom: 80px;
   border: 0.5px solid  #0065FF;
-  position: absolute;
+  position: relative;
   left: 0;
-  top: 80%;
   width: 100%;
   -webkit-transition: 1.5s ease-in-out;
   transition: 1.5s ease-in-out;
-  margin-bottom: 30px;
-}
-
-@media (max-width: 992px) {
-  body .cont .glowne .linia2 {
-    top: 85%;
-  }
-}
-
-@media (max-width: 830px) {
-  body .cont .glowne .linia2 {
-    top: 95%;
-  }
-}
-
-@media (max-width: 768px) {
-  body .cont .glowne .linia2 {
-    top: 80%;
-  }
-}
-
-@media (max-width: 645px) {
-  body .cont .glowne .linia2 {
-    top: 90%;
-  }
-}
-
-@media (max-width: 540px) {
-  body .cont .glowne .linia2 {
-    top: 100%;
-  }
-}
-
-@media (max-width: 360px) {
-  body .cont .glowne .linia2 {
-    top: 105%;
-  }
 }
 /*# sourceMappingURL=style.css.map */
