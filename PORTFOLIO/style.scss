@@ -18,6 +18,9 @@ body
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";    
     cursor: none;
     margin:0;
+    @include media('<=tablet'){
+        cursor: pointer;
+    }
 
 
     .cursor-dot,
@@ -31,7 +34,11 @@ body
     opacity: 0;
     transform: translate(-50%, -50%);
     transition: opacity 0.3s ease-in-out,
-                transform 0.3s ease-in-out;
+    transform 0.3s ease-in-out;
+
+    @include media('<=tablet'){
+        z-index: -1;
+    }
     }
 
     .cursor-dot {
