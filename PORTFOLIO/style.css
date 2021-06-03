@@ -398,6 +398,9 @@ body .cont .glowne .tekst {
 }
 
 body .cont .glowne .label {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   margin-top: 1rem;
   margin-bottom: 0.5rem;
   display: -webkit-box;
@@ -411,6 +414,12 @@ body .cont .glowne .label {
   -webkit-transition: 1.5s ease-in-out;
   transition: 1.5s ease-in-out;
   font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+  body .cont .glowne .label {
+    display: inline-block;
+  }
 }
 
 body .cont .glowne .label .label_link {

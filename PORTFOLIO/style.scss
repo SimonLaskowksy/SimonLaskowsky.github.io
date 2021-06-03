@@ -412,6 +412,7 @@ body
                 }
             
                 .label{
+                    width: fit-content;
                     margin-top: 1rem;
                     margin-bottom: 0.5rem;
                     display: flex;
@@ -424,6 +425,10 @@ body
                     line-height: 140%;
                     transition:  1.5s ease-in-out;
                     font-size: 0.9em;
+
+                    @include media('<=tablet'){
+                        display: inline-block;
+                    }
 
                     // @include media('<=992px'){
                     //     top: 72.5%;
