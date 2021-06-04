@@ -2,8 +2,8 @@
     "version": 3,
     "mappings": "",
     "sources": [
-        "brakpoints.scss"
+        "breakpoints.scss"
     ],
     "names": [],
-    "file": "brakpoints.css"
+    "file": "breakpoints.css"
 }

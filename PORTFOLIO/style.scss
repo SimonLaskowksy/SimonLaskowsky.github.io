@@ -124,8 +124,26 @@ body
             
             }
         }
+
+        .navbaricon{
+            margin-right: 1rem;
+            margin-top: auto;
+            margin-bottom: auto;
+            display: none;
+            cursor: pointer;
+            width: 51.2px;
+            height: 51.2px;
+            background-image: url(img/navbar_icon.png);
+            background-size: cover;
+            background-position: center;
+
+            @include media('<=tablet'){
+                display: block;
+            }
+        }
         
         .sekcje2{
+
             position: absolute;
             right: 3.8%;
             top: 28.25%;
@@ -206,6 +224,10 @@ body
                     }
                 }
                 
+            }
+
+            @include media('<=tablet'){
+                display: none;
             }
         }
     }
