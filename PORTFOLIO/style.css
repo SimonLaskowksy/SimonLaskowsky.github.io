@@ -62,6 +62,16 @@ body .naglowek {
           box-shadow: 0px 25px 65px rgba(0, 0, 0, 0.15);
 }
 
+body .naglowek .n_lewy.show {
+  -webkit-transition: 0s;
+  transition: 0s;
+}
+
+body .naglowek .n_prawy.show {
+  -webkit-transition: 0s;
+  transition: 0s;
+}
+
 body .naglowek .n_lewy {
   width: 100%;
   height: 100%;
@@ -127,13 +137,17 @@ body .naglowek .sekcje .s {
 }
 
 body .naglowek .navbaricon {
+  -webkit-transition: 1.5s ease-in-out;
+  transition: 1.5s ease-in-out;
+  border-radius: 10px;
+  position: absolute;
+  right: 0;
   margin-right: 1rem;
-  margin-top: auto;
-  margin-bottom: auto;
+  margin-top: 0.5rem;
   display: none;
   cursor: pointer;
   width: 51.2px;
-  height: 51.2px;
+  height: 41.2px;
   background-image: url(img/navbar_icon.png);
   background-size: cover;
   background-position: center;
@@ -143,6 +157,45 @@ body .naglowek .navbaricon {
   body .naglowek .navbaricon {
     display: block;
   }
+}
+
+body .naglowek .sekcje2.show {
+  background-color: white;
+  -webkit-box-shadow: 0px 70px 65px 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 70px 65px 10px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  margin-top: 43px;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .naglowek .sekcje2.show .ikony {
+  margin-top: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 20px;
+  height: 20px;
+}
+
+body .naglowek .sekcje2.show .ikony .link {
+  margin-right: 20px;
+}
+
+body .naglowek .sekcje2.show .ikony .icon-facebook {
+  height: 20px;
+}
+
+body .naglowek .sekcje2.show .p_zone {
+  margin-top: 70px;
+  position: absolute;
+  margin-left: 0;
 }
 
 body .naglowek .sekcje2 {
@@ -248,6 +301,7 @@ body .naglowek .sekcje2 .p_zone .przycisk .p_tlo .p_kropka {
 @media (max-width: 768px) {
   body .naglowek .sekcje2 {
     display: none;
+    width: 100%;
   }
 }
 

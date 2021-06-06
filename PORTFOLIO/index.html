@@ -33,7 +33,7 @@
         </div>
         
         <div class="navbaricon">
-            
+
         </div>
 
         <div class="sekcje2">
@@ -175,6 +175,31 @@
     
     
     <script>
+//navbar
+        const hamburger = document.querySelector(".navbaricon");
+        const sekcja = document.querySelector(".sekcje2");
+        const naglowek = document.querySelector(".naglowek");
+
+            hamburger.addEventListener('click', () => {
+                
+                // setTimeout(function () {
+        
+                    sekcja.classList.toggle('show'); 
+
+                // }, 1000);
+
+                // naglowekLewy.classList.add('notransition'); 
+                // doWhateverCssChangesYouWant(someElement);
+                // naglowekLewy.offsetHeight; 
+                // naglowekLewy.classList.remove('notransition');
+
+                naglowekLewy.classList.toggle('show');
+                naglowekPrawy.classList.toggle('show'); 
+                
+            } );
+
+
+
         
         window.addEventListener('scroll', () => {
         document.body.style.setProperty('--scroll',window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
@@ -199,8 +224,13 @@
         let linia2 = document.querySelector(".linia2");
         let label = document.querySelector(".label");
         let labelLink = document.querySelector(".label_link");
+        let sekcje2Show = document.querySelector(".sekcje2");
+        let navabrIcon = document.querySelector(".navbaricon");
+        
 
         let isDark = true;
+
+        console.log(sekcje2Show);
 
         //pojawianie sie tekstu po nacisnieciu przycisku
        // let tekst_pojawienie = document.getElementById('tekst_pojawienie');
@@ -211,6 +241,7 @@
 
             if(isDark){ //jakk jest czarne tlo
 
+               
                 awatar.style.backgroundColor = "#3C3B3A";
                 tloPrawy.style.width = 100 + '%';
                 tloLewy.style.width = 0 + '%';
@@ -218,6 +249,9 @@
                 // naglowekPrawy.style.backgroundColor = "#FFFFFF";
                 naglowekPrawy.style.width = 100 + '%';
                 naglowekLewy.style.width = 0 + '%';
+                // naglowekLewy.style.transition = "2s";
+                // naglowekPrawy.style.transition = "2s";
+
                 logo.style.color = '#faf4e6';
                 tlo.style.backgroundColor = "#FFFFFF";
                 kropka.style.backgroundColor = "#3C3B3A";
@@ -234,10 +268,14 @@
                 label.style.color = "#faf4e6";
                 labelLink.style.textDecoration = "underline";
                 labelLink.style.color = "#faf4e6";
+                sekcje2Show.style.backgroundColor = "#3C3B3A";
+                navabrIcon.style.backgroundColor = "#faf4e6";
     
             }
             else{ // jak jest biale tlo 
 
+                
+               sekcje2Show.style.backgroundColor = "#FFFFFF";
                 awatar.style.backgroundColor = "#FFFFFF";
                 tloPrawy.style.width = 0 + '%';
                 tloLewy.style.width = 100 + '%';
@@ -261,6 +299,7 @@
                 label.style.color = "#212529";
                 labelLink.style.textDecoration = "none";
                 labelLink.style.color = "#0065FF";
+                navabrIcon.style.backgroundColor = "#FFFFFF";
                 
 
                // document.getElementById("tekst_pojawienie").hidden=false;
