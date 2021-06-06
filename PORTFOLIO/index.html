@@ -268,14 +268,21 @@
                 label.style.color = "#faf4e6";
                 labelLink.style.textDecoration = "underline";
                 labelLink.style.color = "#faf4e6";
-                sekcje2Show.style.backgroundColor = "#3C3B3A";
+
+                if(screen.width<768){
+                    sekcje2Show.style.backgroundColor = "#3C3B3A";
+                }
+                else{
+                    sekcje2Show.style.backgroundColor = "transparent";
+                }
+
+
                 navabrIcon.style.backgroundColor = "#faf4e6";
     
             }
             else{ // jak jest biale tlo 
 
                 
-               sekcje2Show.style.backgroundColor = "#FFFFFF";
                 awatar.style.backgroundColor = "#FFFFFF";
                 tloPrawy.style.width = 0 + '%';
                 tloLewy.style.width = 100 + '%';
@@ -300,6 +307,11 @@
                 labelLink.style.textDecoration = "none";
                 labelLink.style.color = "#0065FF";
                 navabrIcon.style.backgroundColor = "#FFFFFF";
+                
+                if(screen.width<768){
+                    sekcje2Show.style.backgroundColor = "#FFFFFF";
+                }
+                
                 
 
                // document.getElementById("tekst_pojawienie").hidden=false;
